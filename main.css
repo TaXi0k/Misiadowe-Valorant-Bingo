@@ -82,10 +82,38 @@ body {
     justify-content: center;
     cursor: pointer;
     user-select: none;
+    transition: ease-in-out 0.2s;
 }
 .gridItem.marked {
     background-color: var(--on-tr);
     border: 4.5px solid var(--on-fl);
+}
+.gridItem:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+.resetButton {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.1vw;
+    color: white;
+    background-color: var(--off-tr);
+    border: 4.5px solid var(--off-fl);
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    user-select: none;
+}
+.resetButton span {
+    font-family: Blender, sans-serif;
+    margin-left: 3px;
+}
+.resetButton:hover {
+    background-color: var(--on-tr);
+    border: 4.5px solid var(--on-fl);
+    transform: scale(1.05);
+    filter: brightness(1.1);
 }
 .bingoBackground {
     position: relative;
